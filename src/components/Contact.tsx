@@ -1,3 +1,4 @@
+import LocaleLink from "./LocaleLink";
 import T from "./T";
 
 export default function Contact() {
@@ -17,9 +18,9 @@ export default function Contact() {
           <T k="contact.note" />
         </p>
         <div className="contact__cta">
-          <a href="/contact" className="btn btn--primary">
+          <LocaleLink href="/contact" className="btn btn--primary">
             <T k="contact.cta" />
-          </a>
+          </LocaleLink>
         </div>
       </div>
     </section>

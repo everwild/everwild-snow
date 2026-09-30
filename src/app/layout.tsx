@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans, Noto_Sans_SC } from "next/font/google";
-import { I18nProvider } from "@/lib/i18n-provider";
+import { headers } from "next/headers";
+import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
 const notoSans = Noto_Sans({
@@ -16,24 +17,33 @@ const notoSansSC = Noto_Sans_SC({
 });
 
 export const metadata: Metadata = {
-  title: "ESA - EVERWILD Snow Adventure - NAGANO",
-  description:
-    "EVERWILD Snow Adventure - Japan winter experience provider. Ski & snowboard lessons, guided skiing, winter hiking, mountaineering, accommodation and transport. Based in Nagano, available nationwide.",
+  metadataBase: new URL(getSiteUrl()),
+  applicationName: "EVERWILD Snow Adventure",
+  title: {
+    default: "EVERWILD Snow Adventure",
+    template: "%s | EVERWILD Snow Adventure",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headerList = await headers();
+  const locale = headerList.get("x-locale");
+  const lang = locale === "zh" ? "zh-CN" : "en";
+
   return (
     <html
-      lang="en"
+      lang={lang}
       className={`${notoSans.variable} ${notoSansSC.variable}`}
     >
-      <body>
-        <I18nProvider>{children}</I18nProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

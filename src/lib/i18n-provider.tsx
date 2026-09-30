@@ -19,20 +19,25 @@ type I18nContextValue = {
 
 const I18nContext = createContext<I18nContextValue | null>(null);
 
-export function I18nProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("en");
+export function I18nProvider({
+  initialLang,
+  children,
+}: {
+  initialLang: Lang;
+  children: ReactNode;
+}) {
+  const [lang, setLangState] = useState<Lang>(initialLang);
 
   useEffect(() => {
-    const saved = localStorage.getItem("esa-lang") as Lang | null;
-    if (saved === "en" || saved === "zh") {
-      setLangState(saved);
+    setLangState(initialLang);
+    document.documentElement.lang = initialLang === "zh" ? "zh-CN" : "en";
+    try {
+      localStorage.setItem("esa-lang", initialLang);
+    } catch {
+      // Ignore browsers that block storage.
     }
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
-    localStorage.setItem("esa-lang", lang);
-  }, [lang]);
+    document.cookie = `esa-lang=${initialLang}; Path=/; Max-Age=31536000; SameSite=Lax`;
+  }, [initialLang]);
 
   const setLang = useCallback((next: Lang) => {
     setLangState(next);
