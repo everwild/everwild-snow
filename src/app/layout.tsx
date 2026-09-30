@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   applicationName: "EVERWILD Snow Adventure",
   title: {
     default: "EVERWILD Snow Adventure",
-    template: "%s | EVERWILD Snow Adventure",
+    template: "EVERWILD Snow Adventure | %s",
   },
   robots: {
     index: true,
