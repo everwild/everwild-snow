@@ -1,3 +1,4 @@
+import LocaleLink from "./LocaleLink";
 import T from "./T";
 
 export default function Packages() {
@@ -50,9 +51,9 @@ export default function Packages() {
           <p className="callout__text">
             <T k="packages.callout.text" />
           </p>
-          <a href="/contact" className="btn btn--primary">
+          <LocaleLink href="/contact" className="btn btn--primary">
             <T k="packages.callout.cta" />
-          </a>
+          </LocaleLink>
         </div>
       </div>
     </section>

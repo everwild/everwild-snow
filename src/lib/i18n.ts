@@ -175,6 +175,16 @@ export const translations = {
       "If any part of this notice is held invalid, the remaining provisions continue in effect. For questions about privacy or these terms, please contact us through the inquiry form on this website.",
 
     "common.placeholder": "Image",
+
+    "meta.home.title": "Ski & Snowboard Lessons in Nagano | EVERWILD Snow Adventure",
+    "meta.home.description":
+      "EVERWILD Snow Adventure - Japan winter experience provider. Ski & snowboard lessons, guided skiing, winter hiking, mountaineering, accommodation and transport. Based in Nagano, available nationwide.",
+    "meta.contact.title": "Contact",
+    "meta.contact.description":
+      "Send an inquiry to EVERWILD Snow Adventure. Tell us your dates, group size, and what you're looking for.",
+    "meta.legal.title": "Privacy & Disclaimer",
+    "meta.legal.description":
+      "Privacy notice and activity disclaimer for EVERWILD Snow Adventure.",
   },
 
   zh: {
@@ -346,6 +356,16 @@ export const translations = {
       "若本说明任何部分被认定无效，其余条款仍然有效。如对隐私或本声明有疑问，请通过本网站咨询表与我们联系。",
 
     "common.placeholder": "图片",
+
+    "meta.home.title": "长野滑雪与单板教学 | EVERWILD Snow Adventure",
+    "meta.home.description":
+      "EVERWILD Snow Adventure 是你的日本冬季一站式服务商：滑雪与单板教学、领滑导滑、冬季徒步、登山、住宿与交通。立足长野，覆盖日本全境。",
+    "meta.contact.title": "联系咨询",
+    "meta.contact.description":
+      "向 EVERWILD Snow Adventure 发送咨询。告诉我们出行日期、人数和需求。",
+    "meta.legal.title": "隐私与免责",
+    "meta.legal.description":
+      "EVERWILD Snow Adventure 的隐私说明与活动免责声明。",
   },
 } as const;
 

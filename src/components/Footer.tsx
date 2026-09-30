@@ -1,3 +1,4 @@
+import LocaleLink from "./LocaleLink";
 import T from "./T";
 
 export default function Footer() {
@@ -12,9 +13,9 @@ export default function Footer() {
           <p className="footer__copy">
             &copy; 2026 EVERWILD. <T k="footer.rights" />
           </p>
-          <a href="/legal" className="footer__legal">
+          <LocaleLink href="/legal" className="footer__legal">
             <T k="footer.legal" />
-          </a>
+          </LocaleLink>
         </div>
       </div>
     </footer>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import LocaleLink from "./LocaleLink";
 import T from "./T";
 
 export default function Hero() {
@@ -30,9 +31,9 @@ export default function Hero() {
           <a href="#services" className="btn btn--primary">
             <T k="hero.cta1" />
           </a>
-          <a href="/contact" className="btn btn--outline">
+          <LocaleLink href="/contact" className="btn btn--outline">
             <T k="hero.cta2" />
-          </a>
+          </LocaleLink>
         </div>
       </div>
     </section>
