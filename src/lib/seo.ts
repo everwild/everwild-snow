@@ -25,14 +25,16 @@ const descriptionKey: Record<SeoPage, TranslationKey> = {
 export function pageMetadata(lang: Lang, page: SeoPage): Metadata {
   const siteUrl = getSiteUrl();
   const path = pathByPage[page];
-  const title = t(lang, titleKey[page]);
+  const pageTitle = t(lang, titleKey[page]);
+  const title =
+    page === "home" ? pageTitle : `EVERWILD Snow Adventure | ${pageTitle}`;
   const description = t(lang, descriptionKey[page]);
   const canonical = `${siteUrl}/${lang}${path}`;
   const en = `${siteUrl}/en${path}`;
   const zh = `${siteUrl}/zh${path}`;
 
   return {
-    title: page === "home" ? { absolute: title } : title,
+    title: { absolute: title },
     description,
     alternates: {
       canonical,

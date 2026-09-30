@@ -176,7 +176,7 @@ export const translations = {
 
     "common.placeholder": "Image",
 
-    "meta.home.title": "Ski & Snowboard Lessons in Nagano | EVERWILD Snow Adventure",
+    "meta.home.title": "EVERWILD Snow Adventure | Ski & Snowboard Lessons in Nagano",
     "meta.home.description":
       "EVERWILD Snow Adventure - Japan winter experience provider. Ski & snowboard lessons, guided skiing, winter hiking, mountaineering, accommodation and transport. Based in Nagano, available nationwide.",
     "meta.contact.title": "Contact",
@@ -357,7 +357,7 @@ export const translations = {
 
     "common.placeholder": "图片",
 
-    "meta.home.title": "长野滑雪与单板教学 | EVERWILD Snow Adventure",
+    "meta.home.title": "EVERWILD Snow Adventure | 长野单板与双板滑雪教学",
     "meta.home.description":
       "EVERWILD Snow Adventure 是你的日本冬季一站式服务商：滑雪与单板教学、领滑导滑、冬季徒步、登山、住宿与交通。立足长野，覆盖日本全境。",
     "meta.contact.title": "联系咨询",
